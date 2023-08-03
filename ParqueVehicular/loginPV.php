@@ -21,7 +21,7 @@ $conn = $conexion->conectarParque();
         <h1>Parque Vehicular</h1>
         <div class="contenedor2">
             <div class="icon">
-                <img src="../logos/estrella.png" alt="">
+                <img src="../logos/logo-pochotes.png" alt="">
             </div>
             <div class="form">
                 <form action="../Clases/logPV.php" method="POST">

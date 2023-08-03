@@ -30,13 +30,13 @@ body {
 .header{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 150px;
     background-color: var(--primary-color);
 }
 
-.header div{
+.header .div1{
     background-image: url(../IMG/ayuntamiento.png);
     width: 160px;
     height: 120px;
@@ -44,8 +44,17 @@ body {
     margin-top: auto;
 }
 
+.header .div2{
+    background-image: url(../logos/estrella2.jpg);
+    width: 160px;
+    height: 120px;
+    background-repeat: no-repeat;
+    margin-top: auto;
+    margin-left: 50px;
+}
+
 .h1{
-    font-size: 36px;
+    font-size: 28px;
     color: white;
     font-weight: bold;
 }
@@ -77,7 +86,8 @@ body {
 }
 
 fieldset{    
-    width: 100%;
+    width: 99%;
+    border-radius: 20px;
 }
 
 legend{
@@ -135,6 +145,12 @@ a{
     border-radius: 200px;    
 }
 
+.icon img{
+    width: 450px;
+    height: 450px;
+    margin-right: 250px;   
+}
+
 .contenedor2__logo img:hover{
     border: 5px solid var(--primary-color);
     box-shadow: 8px 8px 10px 12px rgba(0, 0, 0, 0.5);
@@ -159,6 +175,13 @@ label, select, input{
     color: white;
     font-size: 28px;
     font-weight: bold;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.boton:hover{
+    cursor: pointer;
+    box-shadow: 6px 6px 6px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* NAVBAR STYLING STARTS */
@@ -210,8 +233,6 @@ h1 {
     font-style: var(--font-style);
     font-family: var(--body-font);
 }
-
-
 
 .nav__link:hover {
     position: relative;
@@ -279,11 +300,15 @@ p{
     height: auto;
 }
 
+.contenedor2__sectionUser{
+    width: 100%;
+}
+
 .contenedor2__section img{
-    margin-right: 600px;
-    margin-top: 100px;
-    width: 400px;
-    height: 400px;
+    margin-right: 300px;
+    
+    width: 450px;
+    height: 450px;
 }
 
 .contenedor2__section h1{
@@ -292,3 +317,21 @@ p{
     font-weight: bold;
     color: var(--primary-color);
 }
+
+.contenedor2__sectionUser h1{    
+    font-size: 18px;
+    text-align: start;
+}
+
+.contenedor2__sectionForm .fila{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contenedor2__sectionForm form{
+    height: 100%;
+    box-shadow: 8px 8px 8px 12px rgba(0, 0, 0, 0.5);
+    margin-right: 50px;
+    border-radius: 20px;
+}
+

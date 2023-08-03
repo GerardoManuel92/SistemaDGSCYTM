@@ -5,7 +5,7 @@ if (!isset($_SESSION)) {
 ?>
 <nav class="navbar">
     <div class="logo"><img src="../logos/direccion-administrativa.png" alt=""></div>
-    <p>Menu de Administrador</p>
+    <p>Parque Vehicular (Administrador)</p>
     <div class="menunav">
         <ul class="nav-links">
             <div class="menu">
@@ -39,7 +39,7 @@ if (!isset($_SESSION)) {
                 <li class="dropdown"><a class="nav__link" href="#">Catalogo</a></li>
                 <li class="dropdown"><a class="nav__link" href="#">Usuarios</a>
                     <div class="dropdown-content">
-                        <a class="nav__link" href="#">Alta Usuarios</a>
+                        <a class="nav__link" href="../Pages/registroUsuarios.php">Alta Usuarios</a>
                         <a class="nav__link" href="#">Busqueda Usuarios</a>
                     </div>
                 </li>
