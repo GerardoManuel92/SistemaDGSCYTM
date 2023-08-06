@@ -65,7 +65,7 @@ include '../Clases/seccionUsuario.php';
                                     <?php
                                     $obj = new MetodosAdmin();
                                     $sql = "SELECT * FROM roles_usuario ORDER BY(id_rol) ASC";
-                                    $rolUser = $obj->obtenerRolesUsuario($sql);
+                                    $rolUser = $obj->obtenerDatos($sql);
                                     foreach ($rolUser as $rol) {
                                     ?>
                                         <option value="<?php echo $rol['id_rol']; ?>"><?php echo $rol['descripcion']; ?></option>

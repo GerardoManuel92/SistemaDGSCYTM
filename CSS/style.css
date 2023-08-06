@@ -1,4 +1,4 @@
-:root{
+:root {
     --primary-color: #4A0F03;
     --secondary-color: #ffff;
     --bottom-color: #B28E5E;
@@ -24,10 +24,10 @@ html {
 
 body {
     font-size: 16px;
-    font-family: 'Palanquin', sans-serif;   
+    font-family: 'Palanquin', sans-serif;
 }
 
-.header{
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -36,7 +36,7 @@ body {
     background-color: var(--primary-color);
 }
 
-.header .div1{
+.header .div1 {
     background-image: url(../IMG/ayuntamiento.png);
     width: 160px;
     height: 120px;
@@ -44,7 +44,7 @@ body {
     margin-top: auto;
 }
 
-.header .div2{
+.header .div2 {
     background-image: url(../logos/estrella2.jpg);
     width: 160px;
     height: 120px;
@@ -53,29 +53,29 @@ body {
     margin-left: 50px;
 }
 
-.h1{
+.h1 {
     font-size: 28px;
     color: white;
     font-weight: bold;
 }
 
-.contenedor{
+.contenedor {
     display: flex;
-    flex-direction: row; 
-    justify-content: center; 
-    width: 100%;  
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
     height: 600px;
     border: 1p solid black;
 }
 
-.contenedor h1{
+.contenedor h1 {
     text-align: center;
     font-size: 32px;
     font-weight: bold;
     color: var(--primary-color);
 }
 
-.form{
+.form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,18 +85,32 @@ body {
     border-radius: 20px;
 }
 
-fieldset{    
+.contenedor2__sectionForm .formFiltro .fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contenedor2__sectionForm .formFiltro .fila p {
+    text-align: center;
+}
+
+.contenedor2__sectionForm form h1 {
+    font-size: 24px;
+}
+
+fieldset {
     width: 99%;
     border-radius: 20px;
 }
 
-legend{
+legend {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
 }
 
-a{
+a {
     text-align: center;
     text-decoration: none;
     font-size: 24px;
@@ -104,33 +118,39 @@ a{
     color: var(--primary-color)
 }
 
-.fila{
+.fila {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.columna{
+
+.fila_form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.columna {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.footer{
+.footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     height: 50px;
 }
 
-.footerlogo{
+.footerlogo {
     background-image: url(../logos/pie-paginalogo.png);
     width: 100%;
     height: 50px;
     background-size: cover;
 }
 
-.contenedor2{
+.contenedor2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -139,38 +159,40 @@ a{
     column-gap: 50px;
 }
 
-.contenedor2__logo img{
+.contenedor2__logo img {
     width: 400px;
     height: 400px;
-    border-radius: 200px;    
+    border-radius: 200px;
 }
 
-.icon img{
+.icon img {
     width: 450px;
     height: 450px;
-    margin-right: 250px;   
+    margin-right: 250px;
 }
 
-.contenedor2__logo img:hover{
+.contenedor2__logo img:hover {
     border: 5px solid var(--primary-color);
     box-shadow: 8px 8px 10px 12px rgba(0, 0, 0, 0.5);
     transition: 0.5s;
 }
 
-.contenedor2__logo p{
+.contenedor2__logo p {
     font-size: 32px;
     text-align: center;
     color: var(--primary-color);
     font-weight: bold;
 }
 
-label, select, input{
+label,
+select,
+input {
     font-size: 24px;
     color: var(--primary-color);
     width: 100%;
 }
 
-.boton{
+.boton {
     background-color: var(--primary-color);
     color: white;
     font-size: 28px;
@@ -179,7 +201,7 @@ label, select, input{
     border-style: none;
 }
 
-.boton:hover{
+.boton:hover {
     cursor: pointer;
     box-shadow: 6px 6px 6px 8px rgba(0, 0, 0, 0.5);
 }
@@ -187,28 +209,28 @@ label, select, input{
 /* NAVBAR STYLING STARTS */
 .navbar {
     /* position: fixed; */
-    display: flex;    
+    display: flex;
     justify-content: space-between;
-    align-items: center;   
-    width: 100%;     
+    align-items: center;
+    width: 100%;
     /* border: #4070F4 1px solid; */
 }
 
-.menu{
+.menu {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;    
+    width: 100%;
 }
 
-.menunav{
+.menunav {
     width: 60%;
     column-gap: 50px;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
 }
 
 .nav-links a {
@@ -233,6 +255,12 @@ h1 {
     font-style: var(--font-style);
     font-family: var(--body-font);
 }
+h2{
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
 
 .nav__link:hover {
     position: relative;
@@ -246,14 +274,14 @@ h1 {
     height: 0.3rem;
     left: 0;
     top: 2rem;
-    background-color: var(--primary-color); 
-    color: var(--primary-color);   
+    background-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
-    display: inline-block;   
+    display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -284,54 +312,208 @@ h1 {
     display: block;
 }
 
-.logo img{
+.logo img {
     width: 130px;
     height: 100px;
 }
 
-p{
+p {
     font-size: 18px;
     color: var(--primary-color);
     font-weight: bold;
 }
 
-.contenedor2__section{
+.contenedor2__section {
     width: 50%;
     height: auto;
+    justify-content: center;
 }
 
-.contenedor2__sectionUser{
+.contenedor2__sectionUser {
     width: 100%;
 }
 
-.contenedor2__section img{
+.contenedor2__section img {
     margin-right: 300px;
-    
     width: 450px;
     height: 450px;
 }
 
-.contenedor2__section h1{
+.contenedor2__section h1 {
     text-align: center;
     font-size: 56px;
     font-weight: bold;
     color: var(--primary-color);
 }
 
-.contenedor2__sectionUser h1{    
+.contenedor2__sectionUser h1 {
     font-size: 18px;
     text-align: start;
 }
 
-.contenedor2__sectionForm .fila{
+.contenedor2__sectionForm .fila {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.contenedor2__sectionForm form{
+.contenedor2__sectionForm form {
     height: 100%;
     box-shadow: 8px 8px 8px 12px rgba(0, 0, 0, 0.5);
     margin-right: 50px;
     border-radius: 20px;
 }
 
+.formBusqueda .fila {
+    width: 70%;
+    margin: auto;
+}
+
+/* Estilo dtablas */
+
+.outer-wrapper {
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+    height: auto;
+}
+
+.tble {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+tr, td,
+.tbl,
+.tabla-registros--fila,
+.tabla-registros--fila__header,
+.tabla-registros--columna{
+    border-collapse: collapse;
+    border: 2px solid var(--primary-color);
+} 
+
+.table-wrapper {
+    max-height: 500px;
+    overflow-y: scroll;
+    margin: 2rem;
+    width: 100%;
+}
+
+.tabla-registros--fila__header {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.tabla-registros--columna_icon {
+    display: flex;
+    justify-content: center;
+}
+
+.tabla-registros--columna_icon img{
+    margin-right: 5px;
+}
+
+.contenedor3{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    width: 100%;
+    max-height: 90%;
+    overflow-y: scroll;  
+    gap: 20px;  
+}
+
+.contenedor3__contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    margin: auto;    
+}
+
+.contenedor3__contenido img{
+    width: 90%;
+    margin: auto;
+    height: 150px;
+}
+
+.contenedor3__contenido label,
+.contenedor3__contenido p{
+    font-size: 12px;
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.contenedor3__contenido .fila{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.body_dialog{
+    display: flex;
+    justify-content: center;    
+    background-color: rgba(0, 0, 0, 0.6);
+    height: auto;
+    width: auto;
+}
+
+dialog{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 90%;
+      
+}
+
+.div_dialog{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--primary-color);
+    align-items: center;    
+    width: 100%;
+    height: 110px;
+}
+
+.body_dialog2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div_dialog img{
+    width: 110px;
+    height: 80px;
+}
+
+.div_dialog h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.contenedor-dialog{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    margin-left: 40px;
+    width: 100%;
+    height: 100%;    
+}
+
+.contenedor-dialog__foto{
+    width: 200px;
+    height: 180px;    
+}
+
+.contenedor-dialog__foto img{
+    width: 200px;
+    height: 180px;
+}
