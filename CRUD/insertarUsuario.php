@@ -41,7 +41,7 @@ if ($obj->insertarUsuario($datos) == 1) {
             icon: "success",
         }).then(function() {
             location.reload();
-            window.location = "../Pages/registroUsuarios.php"
+            window.location = "../PagesAdminParque/registroUsuarios.php"
         });
     </script>
 <?php

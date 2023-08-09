@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $resultado = mysqli_query($conn, $sql);
             if ($log = mysqli_fetch_assoc($resultado)) {
                 $perfil = $_SESSION["txtUsuario"] = $log["rol_usuario"];
-                $_SESSION["txtUsuario"] = $log["nombre"] . ' ' . $log["paterno"] . ' ' . $log["materno"];
+                $_SESSION["txtUsuario"] =$log["nombre"] . ' ' . $log["paterno"] . ' ' . $log["materno"];
 
 
                 if ($perfil == 1) {
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             'Autentificación exitosa!',
                             'success',
                         ).then(function() {
-                            window.location = '../ParqueVehicular/menuAdmin.php';
+                            window.location = '../ParqueVehicular/menuAdmin.php';                            
                         });
                     </script>
                 <?php

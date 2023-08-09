@@ -12,38 +12,37 @@ if (!isset($_SESSION)) {
                 <li class="dropdown">
                     <a class="nav__link" href="#Start">Registro</a>
                     <div class="dropdown-content">
-                        <a class="nav__link" href="../Pages/altaResguardatarios.php">Resguardos</a>
-                        <a class="nav__link" href="../Pages/registroCombustible.php">Control de Combustible</a>
-                        <a class="nav__link" href="../Pages/registroVehicular.php">Registro Vehicular</a>
-                        <a class="nav__link" href="../Pages/inspeccion.php">Inspeccion Vehicular</a>
-                        <a class="nav__link" href="../Pages/Multiregistro.php">Otros registros</a>
+                        <a class="nav__link" href="../PagesAdminParque/altaResguardatarios.php">Resguardos</a>
+                        <a class="nav__link" href="../PagesAdminParque/MenuCombustible.php">Control de Combustible</a>
+                        <a class="nav__link" href="../PagesAdminParque/registroVehicular.php">Registro Vehicular</a>
+                        <a class="nav__link" href="../PagesAdminParque/inspeccion.php">Inspeccion Vehicular</a>
+                        <a class="nav__link" href="../PagesAdminParque/Multiregistro.php">Otros registros</a>                        
                     </div>
                 </li>
                 <li class="dropdown">
                     <a class="nav__link" href="#Start">Consultas</a>
                     <div class="dropdown-content">
-                        <a class="nav__link" href="../Pages/listaResguardatarios.php">Resguardatarios</a>
-                        <a class="nav__link" href="../Pages/resguardoUnidades.php">Resguardo de unidades</a>
-                        <a class="nav__link" href="../Pages/FormGasolinas.php">Tipos Combustible</a>
-                        <a href="#">Auditorias</a>
+                        <a class="nav__link" href="../PagesAdminParque/listaResguardatarios.php">Resguardatarios</a>
+                        <a class="nav__link" href="../PagesAdminParque/resguardoUnidades.php">Resguardo de unidades</a>
+                        <a class="nav__link" href="../PagesAdminParque/FormGasolinas.php">Tipos Combustible</a>
+                        <a class="nav__link" href="../PagesAdminParque/BusquedaUnidades.php">Busqueda de unidades</a>
                     </div>
                 </li>
                 <li class="dropdown"><a class="nav__link" href="#">Reportes</a>
-                    <div class="dropdown-content">
-                        <a class="nav__link" href="#">Registro Vehicular</a>
-                        <a class="nav__link" href="#">Control Combustible</a>
-                        <a class="nav__link" href="#">Resguardo de Unidades</a>
+                    <div class="dropdown-content">                        
+                        <a class="nav__link" href="../PagesAdminParque/reportCombustible.php">Control Combustible</a>
+                        <a class="nav__link" href="../reports/resguardosPDF.php">Control Vehicular</a>                        
                     </div>
                 </li>
                 <li class="dropdown"><a class="nav__link" href="#">Catalogo</a>
                     <div class="dropdown-content">
-                        <a class="nav__link" href="../Pages/catalogo.php">Ver catalogo</a>
+                        <a class="nav__link" href="../PagesAdminParque/catalogo.php">Ver catalogo</a>
                     </div>
                 </li>
                 <li class="dropdown"><a class="nav__link" href="#">Usuarios</a>
                     <div class="dropdown-content">
-                        <a class="nav__link" href="../Pages/registroUsuarios.php">Alta Usuarios</a>
-                        <a class="nav__link" href="../Pages/BusquedaUsuarios.php">Busqueda de usuarios</a>
+                        <a class="nav__link" href="../PagesAdminParque/registroUsuarios.php">Alta Usuarios</a>
+                        <a class="nav__link" href="../PagesAdminParque/BusquedaUsuarios.php">Busqueda de usuarios</a>
                     </div>
                 </li>
 

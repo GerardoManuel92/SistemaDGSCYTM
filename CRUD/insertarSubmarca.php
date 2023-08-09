@@ -24,7 +24,7 @@ if ($obj->insertarSubmarca($datos) == 1) {
             icon: "success",
         }).then(function() {
             location.reload();
-            window.location = "../Pages/Multiregistro.php"
+            window.location = "../PagesAdminParque/Multiregistro.php"
         });
     </script>
 <?php

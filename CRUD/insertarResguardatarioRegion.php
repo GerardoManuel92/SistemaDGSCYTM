@@ -32,7 +32,7 @@ if ($obj->insertarResguardatario_Region($datos) == 1) {
             icon: "success",
         }).then(function() {
             location.reload();
-            window.location = "../Pages/altaResguardatarios.php"
+            window.location = "../PagesAdminParque/altaResguardatarios.php"
         });
     </script>
 <?php

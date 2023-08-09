@@ -75,6 +75,51 @@ body {
     color: var(--primary-color);
 }
 
+.contenedor_combustible{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 450px; 
+    width: 100%;
+    column-gap: 30px;
+}
+
+.contenedor_combustible div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px; 
+    border-radius: 10px;      
+}
+
+.contenedor_combustible div:hover{
+       cursor: pointer;
+       box-shadow: 8px 8px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor_combustible p{
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;      
+}
+
+
+.contenedor_combustible--content1{
+    background-color: black;
+}
+
+.contenedor_combustible--content2{
+    background-color: #48C416;
+}
+
+.contenedor_combustible--content3{
+    background-color: #DC3413;
+}
+
 .form {
     display: flex;
     justify-content: center;
@@ -255,7 +300,8 @@ h1 {
     font-style: var(--font-style);
     font-family: var(--body-font);
 }
-h2{
+
+h2 {
     text-align: center;
     font-size: 28px;
     font-weight: bold;
@@ -385,14 +431,15 @@ p {
 }
 
 table,
-tr, td,
+tr,
+td,
 .tbl,
 .tabla-registros--fila,
 .tabla-registros--fila__header,
-.tabla-registros--columna{
+.tabla-registros--columna {
     border-collapse: collapse;
     border: 2px solid var(--primary-color);
-} 
+}
 
 .table-wrapper {
     max-height: 500px;
@@ -411,21 +458,21 @@ tr, td,
     justify-content: center;
 }
 
-.tabla-registros--columna_icon img{
+.tabla-registros--columna_icon img {
     margin-right: 5px;
 }
 
-.contenedor3{
+.contenedor3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     width: 100%;
     max-height: 90%;
-    overflow-y: scroll;  
-    gap: 20px;  
+    overflow-y: scroll;
+    gap: 20px;
 }
 
-.contenedor3__contenido{
+.contenedor3__contenido {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -433,87 +480,127 @@ tr, td,
     height: 300px;
     border: 1px solid var(--primary-color);
     border-radius: 10px;
-    margin: auto;    
+    margin: auto;
 }
 
-.contenedor3__contenido img{
+.contenedor3__contenido img {
     width: 90%;
     margin: auto;
     height: 150px;
 }
 
 .contenedor3__contenido label,
-.contenedor3__contenido p{
+.contenedor3__contenido p {
     font-size: 12px;
     text-align: center;
     color: var(--primary-color);
     font-weight: bold;
 }
 
-.contenedor3__contenido .fila{
+.contenedor3__contenido .fila {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.body_dialog{
+.contenedor4 {
     display: flex;
-    justify-content: center;    
-    background-color: rgba(0, 0, 0, 0.6);
+    flex-direction: column;
+    justify-content: center;
+}
+
+.body_dialog {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
     height: auto;
     width: auto;
 }
 
-dialog{
+dialog {
     display: flex;
     justify-content: center;
     width: 60%;
     height: 90%;
-      
 }
 
-.div_dialog{
+.div_dialog {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: var(--primary-color);
-    align-items: center;    
+    align-items: center;
     width: 100%;
     height: 110px;
 }
 
-.body_dialog2{
+.body_dialog2 {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.div_dialog img{
+.body_dialog--form {
+    height: 65%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.div_dialog img {
     width: 110px;
     height: 80px;
 }
 
-.div_dialog h1{
+.div_dialog h1 {
     font-size: 24px;
     font-weight: bold;
     color: white;
 }
 
-.contenedor-dialog{
+.contenedor-dialog {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
     margin-left: 40px;
     width: 100%;
-    height: 100%;    
+    height: 100%;
 }
 
-.contenedor-dialog__foto{
-    width: 200px;
-    height: 180px;    
-}
-
-.contenedor-dialog__foto img{
+.contenedor-dialog__foto {
     width: 200px;
     height: 180px;
+}
+
+.contenedor-dialog__foto img {
+    width: 200px;
+    height: 180px;
+}
+
+.dialog_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+    border: .3px solid var(--primary-color);
+}
+
+.dialog_fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog_fila form a{
+    text-align: center;
+}
+
+.dialog_columna {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
 }

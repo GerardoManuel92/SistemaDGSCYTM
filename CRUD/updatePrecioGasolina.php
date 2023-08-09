@@ -25,7 +25,7 @@ if ($obj->updateGasolina($datos) == 1) {
             icon: "success",
         }).then(function() {
             location.reload();
-            window.location = "../Pages/FormGasolinas.php"
+            window.location = "../PagesAdminParque/FormGasolinas.php"
         });
     </script>
 <?php

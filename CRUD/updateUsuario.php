@@ -43,7 +43,7 @@ if ($obj->updateUsuario($datos) == 1) {
             icon: "success",
         }).then(function() {
             location.reload();
-            window.location = "../Pages/BusquedaUsuarios.php"
+            window.location = "../PagesAdminParque/BusquedaUsuarios.php"
         });
     </script>
 <?php

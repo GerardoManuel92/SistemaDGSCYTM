@@ -112,6 +112,14 @@
             return $result = mysqli_query($conexion, $insert);
         }
 
+        public function insertarCtrlCombustible($datos){
+            $c = new Conexion();
+            $conexion = $c->conectarParque();
+            $insert = "INSERT INTO control_combustible(id_tipo_gasolina, id_eco, id_ubicacion, kilometraje, kilometraje2, tanque, tanque2, precio_litro, litros_gasolina, costo, no_bomba, folio_ticket, observaciones, fecha, resguardatario) 
+                        VALUES('$datos[0]','$datos[1]','$datos[2]','$datos[3]','$datos[4]','$datos[5]','$datos[6]','$datos[7]','$datos[8]','$datos[9]','$datos[10]','$datos[11]','$datos[12]','$datos[13]','$datos[14]')";
+            return $result = mysqli_query($conexion, $insert);
+        }
+
         //Funciones para modificar datos
 
         public function updateGasolina($datos){
@@ -126,6 +134,27 @@
             $conexion = $c->conectarParque();
             $update = "UPDATE usuarios SET nombre='$datos[0]', paterno='$datos[1]', materno='$datos[2]', telefono='$datos[3]',
             email='$datos[4]', n_usuario='$datos[5]', u_password='$datos[6]', rol_usuario='$datos[7]' WHERE id_usuario='$datos[8]'";
+            return $result = mysqli_query($conexion, $update);
+        }
+
+        public function updateResguardoEco($datos){
+            $c = new Conexion();
+            $conexion = $c->conectarParque();
+            $update = "UPDATE resguardo_ecos SET eco='$datos[0]', resguardatario='$datos[1]' WHERE id_resguardo='$datos[2]'";
+            return $result = mysqli_query($conexion, $update);
+        }
+
+        public function updateResguardoProgresivo($datos){
+            $c = new Conexion();
+            $conexion = $c->conectarParque();
+            $update = "UPDATE resguardo_progresivos SET progresivo='$datos[0]', resguardatario='$datos[1]' WHERE id_resguardo='$datos[2]'";
+            return $result = mysqli_query($conexion, $update);
+        }
+
+        public function updateResguardatario($datos){
+            $c = new Conexion();
+            $conexion = $c->conectarParque();
+            $update = "UPDATE resguardatarios SET nombre='$datos[0]', paterno='$datos[1]', materno='$datos[2]', region='$datos[3]' WHERE id_resguardatario='$datos[4]'";
             return $result = mysqli_query($conexion, $update);
         }
 
