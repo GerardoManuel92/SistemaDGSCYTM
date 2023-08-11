@@ -74,7 +74,7 @@ require_once '../Metodos/MetodosAdmin.php';
 
                 </div>
 
-                <a href="catalogo.php">Salir</a>
+                <a href="../ParqueVehicular/menuAdmin.php">Salir</a>
             <?php }
             include '../Clases/footer.php'; ?>
         </div>

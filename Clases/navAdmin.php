@@ -36,7 +36,8 @@ if (!isset($_SESSION)) {
                 </li>
                 <li class="dropdown"><a class="nav__link" href="#">Catalogo</a>
                     <div class="dropdown-content">
-                        <a class="nav__link" href="../PagesAdminParque/catalogo.php">Ver catalogo</a>
+                        <a class="nav__link" href="../PagesAdminParque/catalogo.php">Catálogo general</a>
+                        <a class="nav__link" href="../PagesAdminParque/dialogCatalogoEco.php">Catálogo por económico</a>
                     </div>
                 </li>
                 <li class="dropdown"><a class="nav__link" href="#">Usuarios</a>

@@ -21,8 +21,6 @@ include '../Clases/seccionUsuario.php';
 <body>
     <h2>Catálogo de fotografías del parque vehicular</h1>
         <main class="contenedor">
-            
-       
             <br>
             <div class="contenedor3">
                 <?php

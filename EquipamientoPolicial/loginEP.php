@@ -22,10 +22,10 @@ $conn = $conexion->conectarEquipo();
         <h1>Equipamiento Policial</h1>
         <div class="contenedor2">
             <div class="icon">
-                <img src="../logos/estrella.png" alt="">
+                <img src="../logos/piedrapochotes.png" alt="">
             </div>
             <div class="form">
-                <form action="" method="POST">
+                <form action="../Clases/logEP.php" method="POST">
                     <fieldset>
                         <legend>Favor de identificarse</legend>
                         <div class="fila">

@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+
+    --primary-color: #631133;
+    --secondary-color: #ffff;
+    --bottom-color: #B28E5E;
+
+    --status-good: #009521;
+    --status-regular: #DCC600;
+    --status-bad: #DC0000;
+
+    --border-color: black;
+    --border: 1px solid black;
+
+}
+
+:root {
+
+    --max-with: 100%;
+    --with-inputs: ;
+    --border-radius: 7px;
+    --card-border: 37px;
+
+
+    --font-family: 'Inter';
+    --font-style: normal;
+    --font-weight: 400;
+    --font-size: 40px;
+
+    --font-size-2: 24px;
+    --h2-size: 13px;
+
+
+}
+
+
+body {
+    margin: 0%;
+    font-family: var(--font-family);
+}
+
+.navbar-login {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-login img {
+    width: 70%;
+}
+
+/* FOOTER */
+.color-login {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 84px;
+}
+
+.color-login-2 {
+    background-color: var(--bottom-color);
+    width: 100%;
+    height: 54px;
+}
+
+.title-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width : 768px) {
+
+    .container,
+    .container2,
+    .containerMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3%;
+    }
+
+    .container{
+        height: 30rem;
+    }
+
+    .container2 {
+        width: 100%;
+    }
+
+    .container3 {
+        height: 40rem;
+        position: relative;        
+    }
+
+    .container3 .col-1 img{
+        margin-top: 2rem;
+        width: 100rem;
+    }
+
+    .container__element2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(0, -50%);
+        background-color: white;
+        background-image: url(../assets/logos/estrellanew.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .containerMenu {
+        height: 40rem;
+    }
+}
+
+.card {
+    /* display: flex; */
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border: var(--border);
+    width: 35%;
+    height: 450px;
+    border-radius: var(--card-border);
+    background: rgba(246, 246, 246, 0.32);
+    border: 1px solid #9F9F9F;
+}
+
+.card h1 {
+    font-family: var(--font-family);
+}
+
+
+
+/* FORMULARIO DE LOGEO */
+
+.input {
+    width: 100%;
+    /* border: #009521 1px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.input input {
+    width: 70%;
+    height: 46px;
+    border-radius: var(--border-radius);
+    font-size: 24px;
+}
+
+.input select {
+    height: 46px;
+    width: 100%;
+}
+
+.user {
+    font-size: var(--h2-size);
+    /* border: #009521 1px solid; */
+    padding-left: 15%;
+}
+
+.btn {
+
+    /* border: #009521 1px solid; */
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn input {
+    background-color: var(--bottom-color);
+    border: none;
+    color: white;
+    font-family: var(--font-family);
+    width: 50%;
+    height: 46px;
+    font-size: var(--font-size-2);
+
+}
+
+
+/* NAVBAR STYLE */
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+    /* position: fixed; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    width: 100%;
+    /* border: #4070F4 1px solid; */
+
+
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    font-family: var(--body-font);
+    font-size: 19px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: var(--font-weight);
+    font-size: var(--font-size);
+    font-style: var(--font-style);
+    font-family: var(--body-font);
+}
+
+.nav__link:hover {   
+    cursor: pointer;
+}
+
+.nav__link:hover::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.18rem;
+    left: 0;
+    top: 2rem;
+    background-color: var(--primary-color);
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    /* background-color: #4CAF50; */
+    /* color: white; */
+    /* padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer; */
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+  } */
+/* LOGO */
+.logo {
+
+    font-family: var(--body-font);
+    margin-left: 2%;
+}
+
+.logo {
+    width: 15%;
+}
+
+.logo img {
+    width: 70%;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    padding-right: 30px;
+}
+
+.menu li:hover {
+    border-radius: 5px;
+    transition: 0.3s ease;
+
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+span img {
+    color: var(--primary-color);
+    font-size: 100px;
+    width: 50%;
+    color: white;
+}
+
+
+.btn__login {
+    border-radius: 8px;
+    border: 1px solid black;    
+}
+
+.btn__login a{
+    cursor: pointer;
+}
+
+
+.btn__register {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+}
+
+
+
+
+/* STYLES MENU */
+
+.row {
+
+    display: flex;
+    width: 100%;
+    height: 765px;
+
+}
+
+
+.col-1 {
+    width: 50%;
+    display: flex;
+    align-items: end;
+    /* justify-content: end; */
+}
+
+.col-1 img {
+    width: 50%;
+
+}
+
+.col-2 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.col-2 h1 {
+    font-size: 70px;
+}
+
+.username {
+    text-align: center;
+    width: 70%;
+
+}
+
+
+.container-registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row-1 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+
+.row-1__botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.columm__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.registro__form {
+    /* border: #009521 1px solid; */
+    margin-left: 60px;
+    height: 500px;
+}
+
+.header {
+
+    display: flex;
+    justify-content: center;
+}
+
+.columm__form input {
+    width: 70%;
+    height: 46px;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 18px;
+    background: rgba(217, 217, 217, 0.462);
+}
+
+.columm__form select {
+
+    width: 70%;
+    height: 46px;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 24px;
+    background: rgba(217, 217, 217, 0.462);
+
+}
+
+.columm__form .span,
+.span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.forms input {
+    width: 70%;
+    height: 46px;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 24px;
+    background: rgba(217, 217, 217, 0.462);
+}
+
+.forms select {
+    width: 70%;
+    height: 46px;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 24px;
+    background: rgba(217, 217, 217, 0.462);
+}
+
+@media (min-width : 768px) {
+    .container__element {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60rem;
+        background-image: url(../assets/logos/estrellanew.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.container__element2 {
+    -webkit-box-shadow: 6px 10px 22px 11px rgba(99, 17, 51, 0.67);
+    -moz-box-shadow: 6px 10px 22px 11px rgba(99, 17, 51, 0.67);
+    box-shadow: 6px 10px 22px 11px rgba(99, 17, 51, 0.67);
+    width: 40rem;
+    height: 30rem;
+    border-radius: 10px;
+}
+
+.container__element2 .container__elementForm fieldset .formContenido__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__elementForm h1 {
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.container__elementForm fieldset legend {
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (min-width : 768px) {
+    .container__elementForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .container__elementForm fieldset {
+        max-height: 100%;
+        margin: auto 20px;
+        border-radius: 10px;
+    }
+
+    .formContenido,
+    .formContenido2 {
+        display: grid;
+        margin-top: 20px;
+    }
+
+    .formContenido {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .formContenido2 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.formContenido .formContenido__field,
+.formContenido .formContenido__field2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formContenido__field label,
+.formContenido__field2 label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.formContenido__field input,
+.formContenido__field select,
+.formContenido__field textarea,
+.formContenido__field2 input,
+.formContenido__field2 select,
+.formContenido__field2 textarea {
+    background-color: transparent;
+}
+
+.formContenido__field input,
+.formContenido__field select,
+.formContenido__field2 input,
+.formContenido__field2 select {
+    padding: 15px;
+    width: 90%;
+    font-size: 20px;
+}
+
+.formContenido__field input {
+    border-style: solid;
+}
+
+.formContenido__field textarea {
+    font-size: 16px;
+}
+
+.formContenido__field select {
+    width: 40rem;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.boton input {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.boton input:hover {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.tble {
+    max-width: 95%;
+    max-height: 100%
+}
+
+.tble .outer-wrapper {
+    border: 1px solid (negro);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.tble .table-wrapper {
+    max-height: 40rem;
+    overflow-y: scroll;
+    margin: 2rem;
+    width: 100%;
+    border: 3px solid (--primary-color);
+}
+
+table{
+    border: 1px solid (--primary-color);
+    border-collapse: collapse;
+    font-weight: bold;
+}
+
+table .tbl, .tblePDF .tbl {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+th,
+td {
+    border: 3px solid #631133;
+    border-collapse: collapse;
+}
+
+.tabla-registros--columna img {
+    width: 100px;
+    height: 70px;
+}
+
+.footer img{
+    height: 75px; 
+    width: 100%;       
+}

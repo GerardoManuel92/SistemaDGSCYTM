@@ -50,7 +50,7 @@ container{
   ul.slider li img{
     width: 300px;
     height: 400px;
-    object-fit: contain;    
+    object-fit: cover;    
   }
   
   ul.slider li:first-child {
