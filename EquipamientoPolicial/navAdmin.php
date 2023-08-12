@@ -34,7 +34,7 @@ if (!isset($_SESSION)) {
                 </li>
                 <li class="dropdown"><a class="nav__link" href="#">Elementos</a>
                     <div class="dropdown-content">
-                        <a class="nav__link" href="../PagesAdminEP/empleado.php">Registrar elemento</a>
+                        <a class="nav__link" href="../PagesAdminEP/registroElementos.php">Registrar elemento</a>
                         <a class="nav__link" href="../PagesAdminEP/listEmpleados.php">Listado elementos</a>
                     </div>
                 </li>

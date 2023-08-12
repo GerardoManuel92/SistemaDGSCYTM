@@ -10,7 +10,7 @@ $conn = new MetodosAdmin();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>Registro de Usuarios</title>
+    <title>Registro de Chalecos</title>
 </head>
 <?php
 include '../Clases/header.php';
@@ -22,8 +22,8 @@ include '../Clases/seccionUsuario.php';
     <div class="container2">
         <div class="container__element">
             <div class="container__elementForm">
-                <h1>Registro general</h1>
-                <form action="#" method="POST">
+                <h1 class="h1" style="text-align: center; font-size: 28px; color: #631133;">Registro general chalecos</h1>
+                <form action="../CRUD/insertRegGeneral.php" method="POST">
                     <fieldset>
                         <legend>Por favor llene el formulario</legend>
                         <div class="fila" style="display: grid; grid-template-columns: repeat(3, 1fr);">

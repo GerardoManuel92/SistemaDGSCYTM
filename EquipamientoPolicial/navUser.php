@@ -4,38 +4,34 @@ if (!isset($_SESSION)) {
 }
 ?>
 <nav class="navbar">
-    <div class="logo"><a href="../ParqueVehicular/menUser.php"><img src="../logos/direccion-administrativa.png" alt=""></a></div>
-    <p>Parque Vehicular (Usuario)</p>
+    <div class="logo"><a href="../EquipamientoPolicial/menUser.php"><img src="../logos/direccion-administrativa.png" alt=""></a></div>
+    <p>Equipamiento Policial (Usuario)</p>
     <div class="menunav">
         <ul class="nav-links">
             <div class="menu">
                 <li class="dropdown">
-                    <a class="nav__link" href="#Start">Registro</a>
+                    <a class="nav__link" href="#Start">Chalecos</a>
                     <div class="dropdown-content">
-                        <a class="nav__link" href="../PagesUserParque/MenuCombustible.php">Control de Combustible</a>
-                        <a class="nav__link" href="../PagesUserParque/registroVehicular.php">Registro Vehicular</a>
-                        <a class="nav__link" href="../PagesUserParque/inspeccion.php">Inspeccion Vehicular</a>
+                        <a class="nav__link" href="../PagesUserEP/datos-generales.php">Resguardo Chalecos</a>
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a class="nav__link" href="#Start">Consultas</a>
+                    <a class="nav__link" href="#Start">Cascos</a>
                     <div class="dropdown-content">
-                        <a class="nav__link" href="../PagesUserParque/BusquedaUnidades.php">Busqueda de unidades</a>
+                        <a class="nav__link" href="../PagesUserEP/resguardo-bienes.php">Resguardo bienes inmuebles</a>
+                        <a class="nav__link" href="../PagesUserEP/resguardo-cascos.php">Relación cascos balisticos</a>
                     </div>
                 </li>
                 <li class="dropdown"><a class="nav__link" href="#">Reportes</a>
                     <div class="dropdown-content">
-                        <a class="nav__link" href="../PagesUserParque/reportCombustible.php">Control Combustible</a>
-                        <a class="nav__link" href="../reports/resguardosPDF.php">Control Vehicular</a>
+                        <a class="nav__link" href="../reports/report-resguardochalecos.php">Resguardo de chalecos</a>
                     </div>
                 </li>
-                <li class="dropdown"><a class="nav__link" href="#">Catalogo</a>
+                <li class="dropdown"><a class="nav__link" href="#">Elementos</a>
                     <div class="dropdown-content">
-                        <a class="nav__link" href="../PagesUserParque/catalogo.php">Catálogo general</a>
-                        <a class="nav__link" href="../PagesUserParque/dialogCatalogoEco.php">Catálogo por económico</a>
+                        <a class="nav__link" href="../PagesUserEP/listEmpleados.php">Listado elementos</a>
                     </div>
                 </li>
-
                 <li class="dropdown"><a class="nav__link" href="../Clases/cerrar-sesion.php">Cerrar Sesion</a></li>
             </div>
         </ul>

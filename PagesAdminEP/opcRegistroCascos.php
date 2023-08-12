@@ -42,7 +42,8 @@ include '../Clases/seccionUsuario.php';
                         </div>
                     </div>
                 </form>
-                <form action="#" method="POST" id="form1">
+                <br>
+                <form action="../CRUD/insertarColorCasco.php" method="POST" id="form1">
                     <h1 class="h1-form">Color</h1>
                     <br>
                     <fieldset>
@@ -61,7 +62,7 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form2">
+                <form action="../CRUD/insertarMarcaCasco.php" method="POST" id="form2">
                     <h1 class="h1-form">Marca</h1>
                     <br>
                     <fieldset>
@@ -80,7 +81,7 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form3">
+                <form action="../CRUD/insertarMaterialCasco.php" method="POST" id="form3">
                     <h1 class="h1-form">Material</h1>
                     <br>
                     <fieldset>
@@ -99,7 +100,7 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form4">
+                <form action="../CRUD/insertarModeloCasco.php" method="POST" id="form4">
                     <h1 class="h1-form">Modelo</h1>
                     <br>
                     <fieldset>
@@ -118,7 +119,7 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form5">
+                <form action="../CRUD/insertarMueble.php" method="POST" id="form5">
                     <h1 class="h1-form">Mueble</h1>
                     <br>
                     <fieldset>
@@ -137,7 +138,7 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form6">
+                <form action="../CRUD/insertarSerieCasco.php" method="POST" id="form6">
                     <h1 class="h1-form">Serie</h1>
                     <br>
                     <fieldset>

@@ -14,7 +14,7 @@ $conn = new MetodosAdmin();
 </head>
 <?php
 include '../Clases/header.php';
-include '../EquipamientoPolicial/navAdmin.php';
+include '../EquipamientoPolicial/navUser.php';
 include '../Clases/seccionUsuario.php';
 ?>
 
@@ -36,17 +36,16 @@ include '../Clases/seccionUsuario.php';
                     </div>
                 </fieldset>
             </form>
-            <br>            
+            <br>
             <form action="#" method="POST" id="form1">
-            <h1 class="h1" style="font-size: 24px; text-align: center; color:#631133">Resultados de la búsqueda</h1>
+                <h1 class="h1" style="font-size: 24px; text-align: center; color:#631133">Resultados de la búsqueda</h1>
                 <div class="tble" style="margin-bottom: 5rem;">
                     <div class="outer-wrapper" style="height: 100%; width: 65%; margin: auto;">
                         <div class="table-wrapper">
                             <table style="margin: auto;">
                                 <thead class="tbl">
                                     <tr>
-                                        <th class="th-datos" colspan="5">Datos generales</th>
-                                        <th class="th-acciones" colspan="2">Acciones</th>
+                                        <th class="th-datos" colspan="6">Datos generales</th>                                        
                                     </tr>
                                     <tr>
                                         <th>#</th>
@@ -55,7 +54,6 @@ include '../Clases/seccionUsuario.php';
                                         <th>Materno</th>
                                         <th>Id de empleado</th>
                                         <th>Estatus</th>
-                                        <th>Modificar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -76,8 +74,6 @@ include '../Clases/seccionUsuario.php';
                                                     <td class="tabla-registros--columna"><?php echo $row['materno']; ?></td>
                                                     <td class="tabla-registros--columna"><?php echo $row['id_numero_de_empleado']; ?></td>
                                                     <td class="tabla-registros--columna"><?php echo $row['estatus']; ?></td>
-                                                    <td class="tabla-registros--columna_icon"><a href="../PagesAdminEP/dialogElemento.php?id=<?php echo $row['id_empleado']?>"><img src="../logos/editar.png" alt="" style="width: 30px; height: 30px;"></a>
-                                                    </td>
                                                 </tr>
                                 </tbody>
                     <?php
@@ -98,8 +94,7 @@ include '../Clases/seccionUsuario.php';
                             <table style="margin: auto;">
                                 <thead class="tbl">
                                     <tr>
-                                        <th class="th-datos" colspan="5">Datos generales</th>
-                                        <th class="th-acciones" colspan="2">Acciones</th>
+                                        <th class="th-datos" colspan="6">Datos generales</th>                                        
                                     </tr>
                                     <tr>
                                         <th>#</th>
@@ -107,8 +102,7 @@ include '../Clases/seccionUsuario.php';
                                         <th>Paterno</th>
                                         <th>Materno</th>
                                         <th>Id de empleado</th>
-                                        <th>Estatus</th>
-                                        <th>Modificar</th>
+                                        <th>Estatus</th>                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -124,9 +118,7 @@ include '../Clases/seccionUsuario.php';
                                             <td class="tabla-registros--columna"><?php echo $row['paterno']; ?></td>
                                             <td class="tabla-registros--columna"><?php echo $row['materno']; ?></td>
                                             <td class="tabla-registros--columna"><?php echo $row['id_numero_de_empleado']; ?></td>
-                                            <td class="tabla-registros--columna"><?php echo $row['estatus']; ?></td>
-                                            <td class="tabla-registros--columna_icon"><a href="../PagesAdminEP/dialogElemento.php?id=<?php echo $row['id_empleado']?>"><img src="../logos/editar.png" alt="" style="width: 30px; height: 30px;"></a>
-                                            </td>
+                                            <td class="tabla-registros--columna"><?php echo $row['estatus']; ?></td>                                            
                                         </tr>
                                 </tbody>
                             <?php }
@@ -135,7 +127,7 @@ include '../Clases/seccionUsuario.php';
                         </div>
                     </div>
                 </div>
-            </form>            
+            </form>
         </div>
     </div>
 </body>

@@ -38,37 +38,30 @@ include '../Clases/seccionUsuario.php';
                             <div class="columnna">
                                 <label for="">Apellido Materno</label>
                                 <input type="text" name="txtMaterno" id="">
-                            </div>
+                            </div> 
                             <div class="columnna">
-                                <label for="">Email</label>
-                                <input type="email" name="txtEmail" id="">
-                            </div>                            
-                            <div class="columnna">
-                                <label for="">Teléfono</label>
-                                <input type="tel" name="txtTelefono" id="">
-                            </div>                            
-                            <div class="columnna">
-                                <label for="">Nombre de usuario</label>
-                                <input type="text" name="txtUsuario" id="">
-                            </div>
-                            <div class="columnna">
-                                <label for="">Password</label>
-                                <input type="password" name="txtPassword1" id="">
-                            </div>
-                            <div class="columnna">
-                                <label for="">Confirmar password</label>
-                                <input type="password" name="txtPassword2" id="">
-                            </div>
-                            <div class="columnna">
-                                <label for="">Rol de usuario</label>
-                                <select name="cmbRol" id="">
+                                <label for="">Id de empleado</label>
+                                <select name="cmbEmp" id="">
                                     <?php
                                     $obj = new MetodosAdmin();
-                                    $sql = "SELECT * FROM roles ORDER BY(id) ASC";
-                                    $rolUser = $obj->obtenerDatosEP($sql);
-                                    foreach ($rolUser as $rol) {
+                                    $sql = "SELECT * FROM numero_empleado ORDER BY(id_numero_de_empleado) ASC";
+                                    $query = $obj->obtenerDatosChalecos($sql);                                    
+                                    foreach ($query as $rol) {
                                     ?>
-                                        <option value="<?php echo $rol['id']; ?>"><?php echo $rol['nombre']; ?></option>
+                                        <option value="<?php echo $rol['id_numero_de_empleado']; ?>"><?php echo $rol['descripcion']; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>                           
+                            <div class="columnna">
+                                <label for="">Estatus</label>
+                                <select name="cmbEstatus" id="">
+                                    <?php
+                                    $obj = new MetodosAdmin();
+                                    $sql = "SELECT * FROM estatus_elemento ORDER BY(id_estatus) ASC";
+                                    $query = $obj->obtenerDatosChalecos($sql);                                    
+                                    foreach ($query as $rol) {
+                                    ?>
+                                        <option value="<?php echo $rol['id_estatus']; ?>"><?php echo $rol['descripcion']; ?></option>
                                     <?php } ?>
                                 </select>
                             </div>

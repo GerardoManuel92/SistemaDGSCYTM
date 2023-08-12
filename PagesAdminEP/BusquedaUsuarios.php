@@ -24,7 +24,7 @@ include '../Clases/seccionUsuario.php';
                 <img src="../logos/piedrapochotes.png" alt="" style="height: 700px; width: 550px;">
             </div>
             <div class="contenedor2__section contenedor2__sectionForm" style="width: 65%;">
-                <form action="" id="formFiltro" class="formFiltro" method="POST">
+                <form action="#" id="formFiltro" class="formFiltro" method="POST">
                     <div class="fila">
                         <div class="columna">
                             <label for="">Seleccione el usuario</label>
@@ -48,7 +48,7 @@ include '../Clases/seccionUsuario.php';
                     </div>
                 </form>
                 <br>
-                <form action="#" method="POST" enctype="multipart/form-data" id="formInspeccion">
+                <form action="../CRUD/updateUsuarioEP.php" method="POST" enctype="multipart/form-data" id="formInspeccion">
                     <h1>Atributos de usuarios</h1>
                     <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -126,7 +126,7 @@ include '../Clases/seccionUsuario.php';
                                     </div>
                                     <br> <br>
                                     <div>
-                                        <input type="submit" value="Registrar" class="boton" name="btnRegistrar">
+                                        <input type="submit" value="Modificar" class="boton" name="btnRegistrar">
                                     </div>
                                 </fieldset>
                     <?php

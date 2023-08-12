@@ -6,11 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parque Vehicular Usuario</title>
+    <title>Equipamiento policial Usuario</title>
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <?php include '../Clases/header.php';?>
-<?php include '../Clases/navUser.php'; ?>
+<?php include '../EquipamientoPolicial/navUser.php'; ?>
 <body>   
     <main class="contenedor" style="height: 500px;">
         <div class="contenedor2">

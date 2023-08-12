@@ -23,7 +23,7 @@ include '../Clases/seccionUsuario.php';
         <div class="container__element">
             <div class="container__elementForm">
                 <h1 class="h1" style="font-size: 28px; color : #631133; text-align: center;">Registro general de cascos</h1>
-                <form action="../insert(Admin)/insertRegenCasco.php" method="POST">
+                <form action="../CRUD/insertRegGeneralCasco.php" method="POST">
                     <fieldset>
                         <legend>Por favor llene el formulario</legend>
                         <div class="fila" style="display: grid; grid-template-columns: repeat(3, 1fr);">
@@ -121,7 +121,7 @@ include '../Clases/seccionUsuario.php';
                             </div>
                             <div class="columna">
                                 <label for="">FECHA FABRICACIÓN</label>
-                                <input type="text" name="txtFF" id="">
+                                <input type="date" name="txtFF" id="">
                             </div>
                             <div class="columna">
                                 <label for="">ESTADO USO</label>

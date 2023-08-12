@@ -1,6 +1,7 @@
 <?php
 require_once '../Conexion/Conexion.php';
 require_once '../Metodos/MetodosAdminEP.php';
+
 $conn = new MetodosAdmin();
 ?>
 <!DOCTYPE html>
@@ -41,13 +42,14 @@ include '../Clases/seccionUsuario.php';
                                 <option value="7">Región</option>
                                 <option value="8">Serie chaleco</option>
                                 <option value="9">Serie placa delantera</option>
-                                <option value="10">Serie placa trasera</option>                                
+                                <option value="10">Serie placa trasera</option>
                             </select>
                             <p class="alert" id="alert"></p>
                         </div>
                     </div>
                 </form>
-                <form action="#" method="POST" id="form1">
+                <br>
+                <form action="../CRUD/insertarCargo.php" method="POST" id="form1">
                     <h1 class="h1-form">Cargo / Grado</h1>
                     <br>
                     <fieldset>
@@ -66,7 +68,7 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form2">
+                <form action="../CRUD/insertarModChaleco.php" method="POST" id="form2">
                     <h1 class="h1-form">Modelo chaleco</h1>
                     <br>
                     <fieldset>
@@ -85,7 +87,7 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form3">
+                <form action="../CRUD/insertarModPlDel.php" method="POST" id="form3">
                     <h1 class="h1-form">Modelo placa delantera</h1>
                     <br>
                     <fieldset>
@@ -104,7 +106,7 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form4">
+                <form action="../CRUD/insertarModPlTr.php" method="POST" id="form4">
                     <h1 class="h1-form">Modelo placa trasera</h1>
                     <br>
                     <fieldset>
@@ -123,7 +125,7 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form5">
+                <form action="../CRUD/insertarNumEco.php" method="POST" id="form5">
                     <h1 class="h1-form">Modelo chaleco</h1>
                     <br>
                     <fieldset>
@@ -132,7 +134,13 @@ include '../Clases/seccionUsuario.php';
                         <div class="fila">
                             <div class="columnna">
                                 <label for="">ID (Automático)</label>
-                                <input type="text" name="txtDescripcion" id="">
+                                <?php
+                                $sql = "SELECT MAX(id_numero_eco+1) AS id FROM numero_eco";
+                                $query = $conn->obtenerDatosChalecos($sql);
+                                foreach ($query as $x) {
+                                ?>
+                                    <input type="text" name="txtDescripcion" id="" value="<?php echo $x['id']; ?>" readonly>
+                                <?php } ?>
                             </div>
                         </div>
                         <br> <br>
@@ -142,7 +150,7 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form6">
+                <form action="../CRUD/insertarNumEmpleado.php" method="POST" id="form6">
                     <h1 class="h1-form">Número de empleado</h1>
                     <br>
                     <fieldset>
@@ -161,7 +169,7 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form7">
+                <form action="../CRUD/insertarRegionChaleco.php" method="POST" id="form7">
                     <h1 class="h1-form">Región</h1>
                     <br>
                     <fieldset>
@@ -180,16 +188,22 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form8">
+                <form action="../CRUD/insertarSerieChaleco.php" method="POST" id="form8">
                     <h1 class="h1-form">Serie chaleco</h1>
                     <br>
                     <fieldset>
                         <br>
-                        <legend>Ingresa la descripción</legend>
+                        <legend>Para generar una nueva serie, solo dar clic en Registrar</legend>
                         <div class="fila">
                             <div class="columnna">
                                 <label for="">Descripcion</label>
-                                <input type="text" name="txtDescripcion" id="">
+                                <?php
+                                $sql = "SELECT MAX(id_serie_chaleco+1) AS id FROM serie_chaleco WHERE id_serie_chaleco NOT IN(SELECT id_serie_chaleco FROM serie_chaleco WHERE id_serie_chaleco='S/N' AND id_serie_chaleco='SN')";
+                                $query = $conn->obtenerDatosChalecos($sql);
+                                foreach ($query as $x) {
+                                ?>
+                                    <input type="text" name="txtDescripcion" id="" value="<?php echo $x['id']; ?>" readonly>
+                                <?php } ?>
                             </div>
                         </div>
                         <br> <br>
@@ -199,16 +213,22 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form9">
-                <h1 class="h1-form">Serie placa delantera</h1>
+                <form action="../CRUD/insertarSeriePlDel.php" method="POST" id="form9">
+                    <h1 class="h1-form">Serie placa delantera</h1>
                     <br>
                     <fieldset>
                         <br>
-                        <legend>Ingresa la descripción</legend>
+                        <legend>Para generar una nueva serie, solo dar clic en Registrar</legend>
                         <div class="fila">
                             <div class="columnna">
                                 <label for="">Descripcion</label>
-                                <input type="text" name="txtDescripcion" id="">
+                                <?php
+                                $sql = "SELECT MAX(id_serie_placa_delantera+1) AS id FROM serie_placa_delantera WHERE id_serie_placa_delantera NOT IN(SELECT id_serie_placa_delantera FROM serie_placa_delantera WHERE id_serie_placa_delantera='S/N')";
+                                $query = $conn->obtenerDatosChalecos($sql);
+                                foreach ($query as $x) {
+                                ?>
+                                    <input type="text" name="txtDescripcion" id="" value="<?php echo $x['id']; ?>" readonly>
+                                <?php } ?>
                             </div>
                         </div>
                         <br> <br>
@@ -218,16 +238,22 @@ include '../Clases/seccionUsuario.php';
                         <br>
                     </fieldset>
                 </form>
-                <form action="#" method="POST" id="form10">
-                <h1 class="h1-form">Serie placa trasera</h1>
+                <form action="../CRUD/insertarSeriePlTr.php" method="POST" id="form10">
+                    <h1 class="h1-form">Serie placa trasera</h1>
                     <br>
                     <fieldset>
                         <br>
-                        <legend>Ingresa la descripción</legend>
+                        <legend>Para generar una nueva serie, solo dar clic en Registrar</legend>
                         <div class="fila">
                             <div class="columnna">
                                 <label for="">Descripcion</label>
-                                <input type="text" name="txtDescripcion" id="">
+                                <?php
+                                $sql = "SELECT MAX(id_serie_placa_trasera+1) AS id FROM serie_placa_trasera WHERE id_serie_placa_trasera NOT IN(SELECT id_serie_placa_trasera FROM serie_placa_trasera WHERE id_serie_placa_trasera='S/N')";
+                                $query = $conn->obtenerDatosChalecos($sql);
+                                foreach ($query as $x) {
+                                ?>
+                                    <input type="text" name="txtDescripcion" id="" value="<?php echo $x['id']; ?>" readonly>
+                                <?php } ?>
                             </div>
                         </div>
                         <br> <br>
@@ -236,13 +262,14 @@ include '../Clases/seccionUsuario.php';
                         </div>
                         <br>
                     </fieldset>
-                </form>                
+                </form>
             </div>
         </div>
-    </main>  
-    <script src="../JS/opcionesChalecosAdmin.js"></script>  
+    </main>
+    <script src="../JS/opcionesChalecosAdmin.js"></script>
 </body>
 <?php
 include '../Clases/footer.php';
 ?>
+
 </html>

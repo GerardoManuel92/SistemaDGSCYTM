@@ -26,7 +26,7 @@ include '../Clases/seccionUsuario.php';
             </div>
             <div class="contenedor2__section contenedor2__sectionForm" style="width: 70%;">
                 <h1>Registro de Cascos</h1>
-                <form action="../insert(Admin)/insertCasco.php" method="POST" enctype="multipart/form-data">
+                <form action="../CRUD/insertarCasco.php" method="POST" enctype="multipart/form-data">
                     <fieldset>
                         <legend>Por favor llene el formulario</legend>
                         <div class="fila" style="display: grid; grid-template-columns: repeat(3, 1fr);">
